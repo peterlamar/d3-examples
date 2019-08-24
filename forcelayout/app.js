@@ -6,6 +6,8 @@ var simulation = d3.forceSimulation(nodes)
   .force('center', d3.forceCenter(width / 2, height / 2))
   .on('tick', ticked);
 
+// 'circle' has special meaning to svg's. 
+// https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
 function ticked() {
   var u = d3.select('svg')
     .selectAll('circle')
